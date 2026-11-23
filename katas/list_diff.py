@@ -15,8 +15,9 @@ def list_diff(values):
     Returns:
         a list of the same length. Empty input returns an empty list.
     """
-    raise NotImplementedError("list_diff not implemented.")
 
+    return [None] + [b-a for a,b in zip(values,values[1:])]
+ 
 
 if __name__ == '__main__':
     print(list_diff([10, 7, 12]))  # [None, -3, 5]
